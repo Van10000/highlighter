@@ -1,0 +1,12 @@
+
+(?P<comment>//[^\n]+|/\*(?:.|\n)*?\*/)
+(?P<string>"(?:[^"\n]|\\.)*")
+(?P<char>'(?:\\.|[^'\n])')
+(?P<method>\w+)\(
+(?:::)(?P<method>\w+)
+(?P<keyword>abstract|throws|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while)
+(?P<indent> )
+(?:[\s\w])(?P<operator>\+=|-=|/=|\*=|==|<|>|<=|>=|\+|-|\*|/|:|%|%=|!=|&|\||\^|&=|\^=|\|=)(?:[\s\w])
+(?P<bracket>\)|\(|\{|\}|\[|\])
+(?P<decorator>@.+)
+(?P<number>-?\d+.?\d*)

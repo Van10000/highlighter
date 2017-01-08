@@ -1,0 +1,13 @@
+* {font-family: monospace; }
+.comment {color: gray;}
+.keyword {color: #C0A000;}
+.method {color: brown}
+.char {color: cornflowerblue}
+.string {color: cornflowerblue}
+.indent { padding-left: 0.3em }
+.operator {color: blue}
+.decorator {color: #CC9999}
+.number {color: cornflowerblue}
+.bracket {color: green}
+.magic_func {color: darkviolet}
+.builtin {color: darkviolet}

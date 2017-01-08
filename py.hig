@@ -1,0 +1,15 @@
+
+(?P<keyword>False|None|True|and|as|assert|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)[^\w]
+(?:\.)(?P<method>[^\d\W]\w*)\(
+(?:[\s\n\(])(?P<builtin>isinstance|locals|enumerate|chr|next|ord|input|divmod|issubclass|property|filter|sum|hash|format|abs|hasattr|pow|bool|bytearray|list|bytes|slice|ascii|min|exec|len|bin|globals|hex|help|staticmethod|vars|reversed|max|sorted|any|compile|object|delattr|float|str|oct|set|dir|tuple|print|zip|memoryview|round|iter|map|callable|all|classmethod|eval|getattr|super|int|__import__|setattr|frozenset|dict|id|range|type|open|complex|repr)[\(\s\n]
+(?P<magic_func>__\w+__)\(
+(?P<number>-?\d+.?\d*)
+(?P<decorator>@.+)
+(?P<indent> )
+(?P<method>[^\d\W]\w*)\(
+(?P<string>"(?:[^"\n]|\\.)*")
+(?P<string>'(?:[^'\n]|\\.)*')
+(?P<comment>#[^\n]+)
+(?P<bracket>\)|\(|\{|\}|\[|\])
+(?:[\s\w])(?P<operator>\+=|-=|/=|\*=|==|<|>|<=|>=|\+|-|\*|/|\*\*|//|:|%|%=|!=|&|\||\^|&=|\^=|\|=)(?:[\s\w])
+(?P<simple_code>\w+)

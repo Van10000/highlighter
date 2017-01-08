@@ -1,0 +1,11 @@
+case_insensitive
+(?:[^\w](?P<keyword>absolute|and|array|asm|begin|case|const|constructor|destructor|div|do|downto|else|end|file|for|function|goto|if|implementation|in|inherited|inline|interface|label|mod|nil|not|object|of|operator|or|packed|procedure|program|record|reintroduce|repeat|self|set|shl|shr|string|then|to|type|unit|until|uses|var|while|with|xor|integer|byte|shortint|longint|word|real|single|double|extended|boolean|char)[^\w])
+^(?P<keyword>absolute|and|array|asm|begin|case|const|constructor|destructor|div|do|downto|else|end|file|for|function|goto|if|implementation|in|inherited|inline|interface|label|mod|nil|not|object|of|operator|or|packed|procedure|program|record|reintroduce|repeat|self|set|shl|shr|string|then|to|type|unit|until|uses|var|while|with|xor|integer|byte|shortint|longint|word|real|single|double|extended|boolean|char)[^\w]
+(?P<number>-?\d+.?\d*)
+(?P<indent> )
+(?P<string>'(?:[^\n']|\\\.')*')
+(?P<comment>//[^\n]+|\{(?:.|\n)*?\})
+(?P<bracket>\)|\(|\{|\}|\[|\])
+(?:[\s\w])(?P<operator>\+=|-=|/=|\*=|==|<|>|<=|>=|<>|\+|-|\*|/|:|%|%=|!=|&|\||\^|&=|\^=|\|=)(?:[\s\w])
+(?P<method>[^\d\W]\w*)\(
+(?:;\s*\n\s*)(?P<method>[^\d\W]\w*);
